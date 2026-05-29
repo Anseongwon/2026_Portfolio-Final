@@ -1,0 +1,406 @@
+/* ==========================================================================
+   Project Page Style - Compact Minimalist Black & White Project Notebook
+   ========================================================================== */
+
+/* Outer Layout Container - Tight margins to fit in single viewport */
+.notebook-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 100px);
+  padding: 15px 20px;
+  overflow: hidden;
+}
+
+/* Compact Notebook White Paper Pad - Sized up slightly for more spacing */
+.project-notepad {
+  position: relative;
+  width: 1080px;
+  background-color: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 4px;
+  box-shadow:
+    6px 6px 0px rgba(0, 0, 0, 0.8),
+    0px 0px 20px rgba(255, 255, 255, 0.05);
+  margin-bottom: 20px;
+  padding: 35px 25px 20px 25px;
+  background-image:
+    linear-gradient(#f4f4f4 1px, transparent 1px),
+    linear-gradient(90deg, #f4f4f4 1px, transparent 1px);
+  background-size: 20px 20px;
+  /* Graph grid paper backdrop */
+}
+
+/* Top Spiral Binder Rings (Coil) */
+.notepad-binder-top {
+  position: absolute;
+  top: -16px;
+  left: 50px;
+  right: 50px;
+  height: 20px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+}
+
+.binder-ring {
+  width: 12px;
+  height: 28px;
+  background-color: #ffffff;
+  /* Pure solid white, no gradients! */
+  border: 2px solid #000000;
+  /* Sharp black borders */
+  box-shadow: 2px 2px 0px #000000;
+  /* Crisp flat pixel drop shadow */
+  border-radius: 0;
+  /* Retro square pixel art corners */
+}
+
+/* Header styling of the notepad - Slimmer */
+.notepad-header {
+  border-bottom: 2px dashed #000000;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.notepad-title {
+  font-family: 'Jersey 20', monospace;
+  font-size: 1.8rem;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.notepad-subtitle {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 1.05rem;
+  color: #555555;
+  font-weight: bold;
+}
+
+/* Sheets & Tabs */
+.project-sheet {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  width: 100%;
+}
+
+.project-sheet.active {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  opacity: 1;
+  align-items: stretch;
+}
+
+/* ==========================================================================
+   Compact Vertical Project Card
+   ========================================================================== */
+
+.project-card {
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 0px #000000;
+  padding: 12px 16px;
+  gap: 8px;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Header elements */
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 4px;
+}
+
+.project-num-badge {
+  font-family: 'Jersey 20', monospace;
+  font-size: 0.95rem;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.project-card-title {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 1.4rem;
+  color: #000000;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Compact Image Box - Exact 16:9 Browser Viewport Ratio centered with side margins */
+.project-img-box {
+  width: 320px;
+  height: 180px;
+  /* 16:9 Ratio */
+  border: 2px solid #000000;
+  overflow: hidden;
+  position: relative;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  /* Center horizontally, leaving space on left and right */
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.project-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.project-card:hover .project-img-box img {
+  filter: grayscale(0%);
+}
+
+/* Made By section box style */
+.project-madeby {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 1.05rem;
+  color: #333333;
+  padding: 5px 10px;
+  background-color: #fafafa;
+  border: 1px dotted #888888;
+  margin-top: 2px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+/* Card Body Sections */
+.section-label {
+  font-family: 'Jersey 20', monospace;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px dashed #cccccc;
+  padding-bottom: 1px;
+}
+
+/*main features*/
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 1.05rem;
+  color: #444444;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  letter-spacing: 0.5px;
+}
+
+.feature-list li {
+  margin-bottom: 0px;
+}
+
+/*directions*/
+.directions-list {
+  padding-left: 14px;
+  margin: 0 0 8px 0;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 1rem;
+  color: #333333;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.directions-list li {
+  margin-bottom: 2px;
+}
+
+/* Action Button */
+.project-btn {
+  display: inline-block;
+  align-self: stretch;
+  margin-top: auto;
+  /* Push to absolute bottom */
+  padding: 6px 12px;
+  font-family: 'Jersey 20', monospace;
+  font-size: 1.05rem;
+  color: #000000;
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.15s ease;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.project-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Placeholders Styling (Compact empty slot)
+   ========================================================================== */
+
+.project-card.placeholder {
+  border: 2px dashed #888888;
+  box-shadow: none;
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+  /* Aligned with 16:9 cards */
+  cursor: default;
+}
+
+.project-card.placeholder:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.placeholder-content {
+  text-align: center;
+  color: #777777;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.placeholder-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.placeholder-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   Pagination Panel Styles (B&W Retro Console)
+   ========================================================================== */
+
+.project-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  z-index: 10;
+}
+
+.project-nav-btn {
+  background: #000000;
+  border: 2px solid azure;
+  color: azure;
+  padding: 4px 12px;
+  font-family: 'Jersey 20', monospace;
+  font-size: 1.1rem;
+  border-radius: 0px;
+  box-shadow: 2px 2px 0px #444;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.project-nav-btn:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 1px 1px 0px #444;
+  transform: translate(2px, 2px);
+}
+
+.project-page-container {
+  display: flex;
+  gap: 6px;
+}
+
+.project-tab {
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #555555;
+  color: rgb(179, 191, 191);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Jersey 20', monospace;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.project-tab:hover {
+  border-color: azure;
+  color: azure;
+}
+
+.project-tab.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.35);
+  font-weight: bold;
+}
+
+/* Keyboard Hints - Slimmer */
+.project-hint {
+  text-align: center;
+  color: rgb(168, 180, 180);
+  font-size: 0.85rem;
+  margin-top: 10px;
+  font-family: 'Jersey 20', monospace;
+  opacity: 0.5;
+}
+
+/* ==========================================================================
+   Responsive Scaling Styles
+   ========================================================================== */
+
+@media (max-width: 1040px) {
+  .project-notepad {
+    width: 100%;
+    max-width: 900px;
+    padding: 35px 20px 20px 20px;
+  }
+}
+
+@media (max-width: 960px) {
+  .project-notepad {
+    max-width: 680px;
+  }
+
+  .project-sheet.active {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .project-card.placeholder {
+    min-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ingredients-list {
+    grid-template-columns: 1fr;
+  }
+}

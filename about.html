@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seongwon's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Black+Han+Sans&family=Bungee&family=Coming+Soon&family=DynaPuff:wght@400..700&family=Jersey+20&family=Jua&family=Nerko+One&family=Rubik+Mono+One&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="profile2.jpg" alt="me" class="headerimg" />
+        <div class="text">
+          <div class="name"><a href="index.html">Anseongwon</a></div>
+          <p>portfolio</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="about.html">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="arcade-cabinet computer-case">
+      <div class="arcade-marquee computer-marquee">
+        <h1>WELCOME TO MYCOM</h1>
+      </div>
+
+      <div class="desktop arcade-screen computer-monitor">
+        <div class="desktop-icons">
+          <div class="pixel-icon" onclick="openWindow('terminal')">
+            <div class="icon-shape terminal-icon"></div>
+            <span class="icon-label">PLAY.EXE</span>
+          </div>
+
+          <div class="pixel-icon" onclick="openWindow('skills-window')">
+            <div class="icon-shape skills-icon"></div>
+            <span class="icon-label">SKILLS.sh</span>
+          </div>
+
+          <div class="pixel-icon" onclick="openWindow('goal-window')">
+            <div class="icon-shape goal-icon"></div>
+            <span class="icon-label">GOAL.TXT</span>
+          </div>
+        </div>
+
+        <!-- 🖥️ 화면 정중앙 둥근 픽셀 프로필 액자 위젯 (Hello! 말풍선 탑재) -->
+        <div class="desktop-profile-widget">
+          <div class="profile-speech-bubble">Hello!</div>
+          <img src="profile2.jpg" alt="Profile" class="profile-pixel-img" />
+        </div>
+
+        <section id="terminal" class="window-popup arcade-window">
+          <div class="terminal-header">
+            <div class="terminal-title">Seongwon's Terminal</div>
+            <button class="btn-close-retro" onclick="closeWindow('terminal', event)">
+              X
+            </button>
+          </div>
+          <div id="terminal-box">
+            <div>Welcome to Seongwon's terminal!</div>
+            <div>
+              Type
+              <span style="color: yellow; font-weight: bold">'help'</span>to
+              see available commands.
+            </div>
+            <div id="history"></div>
+            <div class="input-line">
+              <span>seongwon@portfolio:~$ </span>
+              <input type="text" class="cmd-input" id="cmd" autofocus autocomplete="off" />
+            </div>
+          </div>
+        </section>
+
+        <section id="skills-window" class="window-popup arcade-window generic-window">
+          <div class="terminal-header">
+            <div class="terminal-title">My Skills</div>
+            <button class="btn-close-retro" onclick="closeWindow('skills-window', event)">
+              X
+            </button>
+          </div>
+          <div class="window-content">
+            <div class="skills-container">
+              <div class="skill-wrapper">
+                <div class="water-circle">
+                  <canvas class="wave-canvas" width="100" height="100" data-percent="0.75"></canvas>
+                </div>
+                <div class="skill-name">Linux</div>
+              </div>
+
+              <div class="skill-wrapper">
+                <div class="water-circle">
+                  <canvas class="wave-canvas" width="100" height="100" data-percent="0.5"></canvas>
+                </div>
+                <div class="skill-name">JavaScript</div>
+              </div>
+              <div class="skill-wrapper">
+                <div class="water-circle">
+                  <canvas class="wave-canvas" width="100" height="100" data-percent="0.7"></canvas>
+                </div>
+                <div class="skill-name">HTML</div>
+              </div>
+              <div class="skill-wrapper">
+                <div class="water-circle">
+                  <canvas class="wave-canvas" width="100" height="100" data-percent="0.6"></canvas>
+                </div>
+                <div class="skill-name">CSS</div>
+              </div>
+
+              <div class="skill-wrapper">
+                <div class="water-circle">
+                  <canvas class="wave-canvas" width="100" height="100" data-percent="0.3"></canvas>
+                </div>
+                <div class="skill-name">Python</div>
+              </div>
+
+              <div class="skill-wrapper">
+                <div class="water-circle">
+                  <canvas class="wave-canvas" width="100" height="100" data-percent="0.4"></canvas>
+                </div>
+                <div class="skill-name">C</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="goal-window" class="window-popup arcade-window generic-window">
+          <div class="terminal-header">
+            <div class="terminal-title">My Goals</div>
+            <button class="btn-close-retro" onclick="closeWindow('goal-window', event)">
+              X
+            </button>
+          </div>
+          <div class="window-content"></div>
+        </section>
+
+        <!--작업표시줄-->
+        <div class="computer-taskbar">
+          <div class="taskbar-left">
+            <button class="start-btn" onclick="toggleStartMenu(event)">
+              <span class="start-icon">💻</span>START
+            </button>
+            <div class="start-menu d-none" id="start-menu-popup">
+              <div class="start-menu-header">SYSTEM MENU</div>
+              <a href="index.html" class="start-menu-item">📂 HOME</a>
+              <a href="project.html" class="start-menu-item">📂 PROJECTS</a>
+              <a href="contact.html" class="start-menu-item">📂 CONTACT</a>
+              <div class="start-menu-separator"></div>
+              <div class="start-menu-item" onclick="openWindow('terminal')">📟 PLAY.EXE</div>
+              <div class="start-menu-item" onclick="openWindow('skills-window')">📟 SKILLS.sh</div>
+              <div class="start-menu-item" onclick="openWindow('goal-window')">📟 GOAL.TXT</div>
+            </div>
+          </div>
+          <div class="taskbar-middle">
+            <div class="task-tab" id="tab-terminal" onclick="toggleMinMax('terminal')">📟 PLAY.EXE</div>
+            <div class="task-tab" id="tab-skills" onclick="toggleMinMax('skills-window')">📟 SKILLS.sh</div>
+            <div class="task-tab" id="tab-goal" onclick="toggleMinMax('goal-window')">📟 GOAL.TXT</div>
+          </div>
+          <div class="taskbar-right">
+            <div class="system-tray">
+              <span class="tray-icon">🔊</span>
+              <span class="system-clock" id="taskbar-clock">12:00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      © 2026 Designed & developed by Anseongwon.<br />
+      All rights reserved.
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

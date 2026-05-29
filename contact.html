@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anseongwon | Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Black+Han+Sans&family=Bungee&family=Coming+Soon&family=DynaPuff:wght@400..700&family=Jersey+20&family=Jua&family=Nerko+One&family=Rubik+Mono+One&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="profile2.jpg" alt="me" class="headerimg" />
+        <div class="text">
+          <div class="name"><a href="index.html">Anseongwon</a></div>
+          <p>portfolio</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="pixel-console-container">
+      <div class="pixel-console">
+
+        <div class="console-titlebar">
+          <span class="title-text">CONTACT METHOD</span>
+        </div>
+
+        <div class="console-content">
+          <div class="row g-4">
+
+            <div class="col-md-7 position-relative">
+              <div id="form-section">
+                <div class="section-title">>SEND A MESSAGE</div>
+                <form id="minimal-contact-form" onsubmit="handleMinimalSubmit(event)">
+                  <div class="form-group-minimal">
+                    <label for="min-name">YOUR NAME</label>
+                    <input type="text" id="min-name" class="min-input" required autocomplete="off"
+                      placeholder="YOUR NAME" />
+                  </div>
+
+                  <div class="form-group-minimal">
+                    <label for="min-email">EMAIL ADDRESS</label>
+                    <input type="email" id="min-email" class="min-input" required autocomplete="off"
+                      placeholder="YOUR@EMAIL.COM" />
+                  </div>
+
+                  <div class="form-group-minimal">
+                    <label for="min-message">MESSAGE CONTENT</label>
+                    <textarea id="min-message" class="min-input" required rows="5"
+                      placeholder="WRITE YOUR PACKET DATA HERE..."></textarea>
+                  </div>
+
+                  <div class="submit-container-minimal">
+                    <button type="submit" class="min-btn">
+                      Send Message
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <!--메세지 성공-->
+              <div class="success-overlay d-none" id="success-prompt">
+                <div class="success-icon">✓</div>
+                <div class="success-title">Message sent!</div>
+                <p class="success-subtitle" id="success-user-msg">Thank You. Message sent successfully.</p>
+                <button class="min-btn mt-3" onclick="resetMinimalForm()">Send New Message</button>
+              </div>
+            </div>
+
+            <div class="col-md-5 d-flex flex-column justify-content-between">
+
+              <div>
+                <div class="section-title">> PROFILE</div>
+                <div class="info-block">
+                  <div class="info-row">
+                    <span class="info-label">RECIPIENT:</span>
+                    <span class="info-val">AN Seongwon</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-label">MAJOR:</span>
+                    <span class="info-val">Information Security</span>
+                  </div>
+                  <div class="info-row">
+                    <span class="info-label">STATUS:</span>
+                    <span class="info-val blinking">LISTENING...</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="section-title">> SOCIAL LINKS</div>
+                <div class="links-block">
+                  <a href="https://github.com/Anseongwon" target="_blank" class="min-link-tag">
+                    Github.URL
+                  </a>
+                  <a href="https://www.instagram.com/seongvvon?igsh=MXY0ZDZwNnBhbjVyZQ%3D%3D&utm_source=qr"
+                    target="_blank" class="min-link-tag">
+                    Instagram.URL
+                  </a>
+                  <a href="https://blog.naver.com/asvvstudy" target="_blank" class="min-link-tag">
+                    Naver Blog.URL
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <footer>
+      © 2026 Designed & developed by Anseongwon.<br />
+      All rights reserved.
+    </footer>
+  </main>
+
+  <script src="contact.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,320 @@
+/* ===============================================
+contact page
+=============================================== */
+
+.pixel-console-container {
+  width: 98%;
+  max-width: 1280px;
+  margin: 30px auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.pixel-console {
+  background-color: #000000;
+  border: 5px dashed #ffffff;
+  box-shadow: 8px 8px 0px rgba(255, 255, 255, 0.4);
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.console-titlebar {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.title-decor {
+  opacity: 0.6;
+}
+
+.console-content {
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.section-title {
+  color: #ffffff;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 22px;
+  border-bottom: 2px dashed #ffffff;
+  padding-bottom: 6px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* ===============================================
+연락처 정보 입력하는곳
+=============================================== */
+.form-group-minimal {
+  border: 2px solid #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #000000;
+}
+
+.form-group-minimal label {
+  color: #ffffff;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+.min-input {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-bottom: 2px dashed #ffffff;
+  padding: 8px 0;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 18px;
+  outline: none;
+  border-radius: 0px;
+  box-sizing: border-box;
+  transition: all 0.12s ease-out;
+}
+
+/*호버할때 색상반전*/
+.min-input:focus {
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom: 2px solid #ffffff;
+  padding-left: 8px;
+}
+
+.min-input::placeholder {
+  color: #555555;
+  transition: color 0.12s ease-out;
+}
+
+.min-input:focus::placeholder {
+  color: #bbbbbb;
+}
+
+textarea.min-input {
+  resize: none;
+}
+
+.submit-container-minimal {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.min-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px dashed #ffffff;
+  padding: 10px 26px;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 0px;
+  outline: none;
+  transition: all 0.12s ease-out;
+}
+
+.min-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-style: solid;
+}
+
+.min-btn:active {
+  transform: translate(2px, 2px);
+}
+
+/* ===============================================
+메세지 전송 성공했을떄
+=============================================== */
+.success-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 5;
+  border: 2px dashed #ffffff;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.success-icon {
+  font-size: 48px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  line-height: 1;
+}
+
+.success-title {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 32px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.success-subtitle {
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 16px;
+  color: #888888;
+  margin-bottom: 25px;
+}
+
+/* ===============================================
+연락처정보
+=============================================== */
+.info-block {
+  border: 2px solid #ffffff;
+  padding: 20px;
+  background-color: #000000;
+  border-radius: 0px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-family: 'Jersey 20', sans-serif;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  color: #888888;
+}
+
+.info-val {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.links-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.min-link-tag {
+  display: block;
+  background-color: transparent;
+  color: azure;
+  border: 2px dashed azure;
+  /* 요청사항: 테두리를 2px 점선(dashed)으로 얇게 변경 */
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Jersey 20', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.5px;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.3);
+  transition: all 0.1s ease;
+}
+
+/*깃허브*/
+.min-link-tag:nth-child(1):hover {
+  background-color: aqua;
+  border-color: aqua;
+  color: #0e101f;
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.3);
+  transform: translate(2px, 2px);
+}
+
+/*인스타*/
+.min-link-tag:nth-child(2):hover {
+  background-color: hotpink;
+  border-color: hotpink;
+  color: #0e101f;
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.3);
+  transform: translate(2px, 2px);
+}
+
+/*블로그*/
+.min-link-tag:nth-child(3):hover {
+  background-color: #00ff00;
+  border-color: #00ff00;
+  color: #0e101f;
+  box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.3);
+  transform: translate(2px, 2px);
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blinking {
+  animation: blink 1.2s step-end infinite;
+}
+
+/* ===============================================
+Footer
+=============================================== */
+footer {
+  margin-top: 100px;
+  padding: 50px 20px;
+  text-align: center;
+  color: rgb(168, 180, 180);
+  font-size: 14px;
+}
+
+/* ===============================================
+반응형 디자인
+=============================================== */
+@media (max-width: 768px) {
+  .pixel-console-container {
+    margin-top: 25px;
+  }
+
+  .pixel-console {
+    box-shadow: 0 0 0 4px #000000, 0 0 0 6px #ffffff;
+  }
+
+  .console-titlebar {
+    font-size: 20px;
+    padding: 8px 15px;
+  }
+
+  .console-content {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .info-block {
+    padding: 15px;
+  }
+
+  .min-link-tag {
+    padding: 10px;
+    font-size: 18px;
+  }
+}
