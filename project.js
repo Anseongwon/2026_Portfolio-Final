@@ -1,5 +1,5 @@
 /* ==========================================================================
-   project 페이지
+   Project Page Script - Minimalist Project Notebook Tabs
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('next-project-btn');
 
   let currentSheet = 1;
-  const totalSheets = sheets.length;
+  const totalSheets = sheets.length; // Exactly 3 sheets/pages
+
+  // Initialize sheet view
   showSheet(currentSheet);
 
-
+  // Tab selections (Numbers 1, 2, 3)
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const pageNum = parseInt(tab.getAttribute('data-page'), 10);
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Prev / Next button clicks
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       navigatePrev();
@@ -31,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
       navigateNext();
     });
   }
-
-
 
   function navigatePrev() {
     if (currentSheet > 1) {
@@ -46,11 +47,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Activates target sheet and updates bottom tabs highlighting
   function showSheet(pageNum) {
     if (pageNum < 1 || pageNum > totalSheets) return;
-
+    
     currentSheet = pageNum;
 
+    // Toggle active classes on sheets (fades in)
     sheets.forEach((sheet, index) => {
       const isTarget = (index + 1) === currentSheet;
       if (isTarget) {
@@ -60,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Update highlights on bottom pagination numbers
     tabs.forEach(tab => {
       const tabNum = parseInt(tab.getAttribute('data-page'), 10);
       if (tabNum === currentSheet) {
@@ -69,10 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Disable navigation arrows if at boundaries
     if (prevBtn) {
       if (currentSheet === 1) {
         prevBtn.style.opacity = '0.35';
-        prevBtn.style.cursor = 'default';
+        prevBtn.style.cursor = 'not-allowed';
       } else {
         prevBtn.style.opacity = '1';
         prevBtn.style.cursor = 'pointer';
@@ -82,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (nextBtn) {
       if (currentSheet === totalSheets) {
         nextBtn.style.opacity = '0.35';
-        nextBtn.style.cursor = 'default';
+        nextBtn.style.cursor = 'not-allowed';
       } else {
         nextBtn.style.opacity = '1';
         nextBtn.style.cursor = 'pointer';
@@ -90,5 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // Expose function globally just in case
   window.goToProjectPage = showSheet;
 });

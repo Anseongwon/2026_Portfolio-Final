@@ -41,6 +41,14 @@ main {
   align-items: center;
 }
 
+footer {
+  margin-top: 200px;
+  text-align: center;
+  color: rgb(168, 180, 180);
+  font-size: 14px;
+  padding: 100px;
+}
+
 /* ===============================================
 네비게이션바 (공통)
 =============================================== */
@@ -1121,6 +1129,7 @@ main {
     border-top-width: 6px;
     border-right-width: 6px;
   }
+
 }
 
 /* ===============================================
@@ -1144,7 +1153,8 @@ main {
 }
 
 .notepad-paper {
-  background-color: #ffffff; /* White background */
+  background-color: #ffffff;
+  /* White background */
   background-image: linear-gradient(rgba(0, 0, 0, 0.15) 1px, transparent 1px);
   background-size: 100% 36px;
   line-height: 36px;
@@ -1213,7 +1223,8 @@ main {
   width: 18px;
   height: 18px;
   border: 2px solid #000000;
-  border-radius: 0px; /* pixel style square */
+  border-radius: 0px;
+  /* pixel style square */
   margin-right: 15px;
   position: relative;
   display: inline-block;
@@ -1231,7 +1242,8 @@ main {
   top: -8px;
   left: 1px;
   font-size: 22px;
-  color: #000000; /* Strict Black */
+  color: #000000;
+  /* Strict Black */
   font-family: 'Jersey 20', sans-serif;
   font-weight: bold;
 }
@@ -1247,27 +1259,34 @@ main {
     background-size: 100% 30px;
     line-height: 30px;
   }
+
   .notepad-paper::before {
     left: 35px;
   }
+
   .todo-checkbox {
     font-size: 18px;
   }
+
   .notepad-checkbox {
     width: 14px;
     height: 14px;
     margin-right: 10px;
   }
+
   .notepad-checkbox:checked::after {
     font-size: 18px;
     top: -8px;
     left: 0px;
   }
+
   .notepad-header {
     font-size: 18px;
     margin-bottom: 12px;
   }
+
   .todo-text {
     line-height: 20px;
   }
+
 }

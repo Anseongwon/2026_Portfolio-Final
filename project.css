@@ -212,7 +212,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.5px;
 }
 
 .feature-list li {
