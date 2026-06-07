@@ -1,69 +1,67 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seongwon's Portfolio  </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Black+Han+Sans&family=Bungee&family=Coming+Soon&family=DynaPuff:wght@400..700&family=Jersey+20&family=Jua&family=Nerko+One&family=Rubik+Mono+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="main.css" />
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="header-container">
-        <div class="logo">
-          <img src="profile2.jpg" alt="me" class="headerimg" />
-          <div class="text">
-            <div class="name"><a href="index.html">Anseongwon</a></div>
-            <p>portfolio</p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seongwon's Portfolio </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Black+Han+Sans&family=Bungee&family=Coming+Soon&family=DynaPuff:wght@400..700&family=Jersey+20&family=Jua&family=Nerko+One&family=Rubik+Mono+One&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="theme.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="profile2.jpg" alt="me" class="headerimg" />
+        <div class="text">
+          <div class="name"><a href="index.html">Anseongwon</a></div>
+          <p>portfolio</p>
         </div>
-
-        <nav class="nav">
-          <a href="about.html">About</a>
-          <a href="project.html">Projects</a>
-          <a href="contact.html">Contact</a>
-        </nav>
       </div>
-    </header>
 
-    <main>
-      <div class="main-page">
-        <div class="logo-wrapper">
+      <nav class="nav">
+        <a href="about.html">About</a>
+        <a href="project.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" class="theme-toggle-btn">[ LIGHT ]</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="main-page">
+      <div class="logo-wrapper">
         <div class="hi">
           <h1 class="hi line-1">Hi i'm</h1>
-            <h1 class="hi line-2">Anseongwon</h1>
-        </div>
-        </div>
-        <div class="hi-pg">
-          <p>
-            Hi, i'm An Seongwon, an Information Security student at Joongbu
-            University.
-          </p>
-          <p>This is my first project and portfolio — welcome.</p>
-          <a href="contact.html" class="contact-me">contact me</a>
+          <h1 class="hi line-2">Anseongwon</h1>
         </div>
       </div>
-      <footer>
-        © 2026 Designed & developed by Anseongwon.<br />
-        All rights reserved.
-      </footer>
-    </main>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+      <div class="hi-pg">
+        <p>
+          Hi, i'm An Seongwon, an Information Security student at Joongbu
+          University.
+        </p>
+        <p>This is my first project and portfolio — welcome.</p>
+        <a href="contact.html" class="contact-me">contact me</a>
+      </div>
+    </div>
+    <footer>
+      © 2026 Designed & developed by Anseongwon.<br />
+      All rights reserved.
+    </footer>
+  </main>
+  <script src="theme.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

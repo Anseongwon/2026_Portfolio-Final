@@ -1,3 +1,18 @@
+/* ===============================================
+스크롤바 감추기 (스크롤 기능은 유지)
+=============================================== */
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
 * {
   box-sizing: border-box;
 }
@@ -162,7 +177,6 @@ Hi i'm Anseongwon
 /*두 번째 줄*/
 .hi h1.line-2 {
   margin-bottom: 50px;
-  /* 아래 요소와의 간격 유지 */
   /*0.8초 후 타이핑 시작, 커서 깜빡이기*/
   animation:
     typing-2 1.2s steps(11) 0.8s forwards,

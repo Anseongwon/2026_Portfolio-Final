@@ -1,4 +1,19 @@
 /* ===============================================
+스크롤바 감추기 (스크롤 기능은 유지)
+=============================================== */
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* ===============================================
 기본적인 틀
 =============================================== */
 * {
@@ -124,7 +139,7 @@ footer {
 /* ===============================================
 게임기 큰 틀
 =============================================== */
-.arcade-cabinet.computer-case {
+.computer-case {
   width: 98%;
   max-width: 1280px;
   margin: 30px auto;
@@ -142,7 +157,7 @@ footer {
 
 
 /*welcome to mycom*/
-.arcade-marquee.computer-marquee {
+.computer-marquee {
   background: #ffffff;
   border: 4px solid #000000;
   box-shadow: 4px 4px 0px #000000;
@@ -151,12 +166,12 @@ footer {
   position: relative;
 }
 
-.arcade-marquee.computer-marquee::before,
-.arcade-marquee.computer-marquee::after {
+.computer-marquee::before,
+.computer-marquee::after {
   display: none;
 }
 
-.arcade-marquee.computer-marquee h1 {
+.computer-marquee h1 {
   font-family: 'Jersey 20', sans-serif;
   font-size: 32px;
   color: #000000;
@@ -169,7 +184,7 @@ footer {
 /* ===============================================
 화면
 =============================================== */
-.arcade-screen.computer-monitor {
+.computer-monitor {
   position: relative;
   width: 100%;
   height: 72vh;
@@ -395,7 +410,7 @@ footer {
 }
 
 /*공통적인 창 스타일*/
-.arcade-window,
+.computer-window,
 .generic-window {
   background: #000000;
   border: 2px solid #ffffff;
@@ -601,7 +616,7 @@ footer {
     justify-content: center;
   }
 
-  .arcade-cabinet {
+  .computer-case {
     width: 100%;
     margin: 10px auto;
     padding: 15px;
@@ -609,16 +624,16 @@ footer {
     box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.56);
   }
 
-  .arcade-marquee {
+  .computer-marquee {
     padding: 8px;
   }
 
-  .arcade-marquee h1 {
+  .computer-marquee h1 {
     font-size: 24px;
     letter-spacing: 1px;
   }
 
-  .arcade-screen {
+  .computer-monitor {
     height: 70vh;
     min-height: 520px;
   }
@@ -718,7 +733,7 @@ footer {
     font-size: 15px;
   }
 
-  .arcade-bottom {
+  .computer-bottom {
     padding: 8px;
   }
 
@@ -734,17 +749,17 @@ footer {
 
 
 @media (max-width: 480px) {
-  .arcade-cabinet {
+  .computer-case {
     border-width: 2px;
     padding: 10px;
     box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.56);
   }
 
-  .arcade-marquee h1 {
+  .computer-marquee h1 {
     font-size: 20px;
   }
 
-  .arcade-screen {
+  .computer-monitor {
     height: 65vh;
     min-height: 460px;
   }
@@ -968,7 +983,7 @@ footer {
   user-select: none;
 }
 
-.arcade-screen.computer-monitor {
+.computer-monitor {
   padding-bottom: 45px !important;
 }
 

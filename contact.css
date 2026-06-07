@@ -1,3 +1,16 @@
+/* 스크롤바 감추기 (스크롤 기능은 유지) */
+html {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
 /* ===============================================
 contact page
 =============================================== */

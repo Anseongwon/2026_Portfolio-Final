@@ -1,0 +1,400 @@
+/* ==========================================================================
+   Global Light Mode & Theme Toggle Styles
+   ========================================================================== */
+
+/* 1. Global / Body styles */
+body.light-mode {
+  background-color: #dcdcdc !important;
+  background-image:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 4px),
+    radial-gradient(circle at center, transparent 30%, rgba(0, 0, 0, 0.12) 100%) !important;
+  background-size: 100% 4px, 100% 100% !important;
+  background-repeat: repeat, no-repeat !important;
+  color: #111111 !important;
+}
+
+body.light-mode .header {
+  background-color: #dcdcdc !important;
+  background-image:
+    repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.05) 2px,
+      rgba(0, 0, 0, 0.05) 4px) !important;
+  background-size: 100% 4px !important;
+  border-bottom: 2px solid #000000;
+}
+
+body.light-mode .logo .name a {
+  color: #000000 !important;
+}
+
+body.light-mode .logo p {
+  color: #555555 !important;
+}
+
+body.light-mode .nav a {
+  color: #444444 !important;
+}
+
+body.light-mode .nav a:hover {
+  color: #000000 !important;
+}
+
+body.light-mode .headerimg {
+  border-color: #000000 !important;
+}
+
+body.light-mode footer {
+  color: #555555 !important;
+}
+
+/* Toggle Button Styling */
+.theme-toggle-btn {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: 'Jersey 20', monospace;
+  font-size: 1.05rem;
+  padding: 1px 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-left: 15px;
+  letter-spacing: 0.5px;
+  border-radius: 0px;
+  outline: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.theme-toggle-btn:hover,
+.theme-toggle-btn:active {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.theme-toggle-btn:active {
+  transform: scale(0.95);
+}
+
+body.light-mode .theme-toggle-btn {
+  border-color: #000000 !important;
+  color: #000000 !important;
+  background-color: transparent !important;
+}
+
+body.light-mode .theme-toggle-btn:hover,
+body.light-mode .theme-toggle-btn:active {
+  background-color: #000000 !important;
+  color: #dcdcdc !important;
+}
+
+/* ==========================================================================
+   2. Index Page Overrides
+   ========================================================================== */
+body.light-mode .hi-pg {
+  color: #333333 !important;
+}
+
+body.light-mode .hi h1 {
+  color: #000000 !important;
+  text-shadow: 4px 4px 0px #777777 !important;
+}
+
+body.light-mode .hi:hover h1 {
+  color: #777777 !important;
+  text-shadow: 4px 4px 0px #000000 !important;
+}
+
+body.light-mode .hi-pg .contact-me {
+  border-color: #000000 !important;
+  color: #000000 !important;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-mode .hi-pg a.contact-me:hover {
+  background: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   3. About Page (Desktop OS Simulation) Overrides
+   ========================================================================== */
+body.light-mode .computer-monitor {
+  background-color: #dcdcdc !important;
+  border-color: #000000 !important;
+  box-shadow: 6px 6px 0px #000000, inset 5px 5px 0px rgba(0, 0, 0, 0.15) !important;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.4) 50%, rgba(200, 200, 200, 0.45) 50%),
+    radial-gradient(circle at center, transparent 40%, rgba(0, 0, 0, 0.1) 100%) !important;
+  background-size: 100% 4px, 100% 100% !important;
+}
+
+body.light-mode .computer-marquee {
+  background-color: #e0e0e0 !important;
+  border-color: #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+}
+
+body.light-mode .computer-marquee h1 {
+  color: #000000 !important;
+  text-shadow: none !important;
+}
+
+body.light-mode .computer-window,
+body.light-mode .generic-window {
+  background: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 5px 5px 0px #000000 !important;
+}
+
+body.light-mode .terminal-header {
+  background: #e0e0e0 !important;
+  border-bottom: 2px solid #000000 !important;
+}
+
+body.light-mode .terminal-title {
+  color: #000000 !important;
+}
+
+body.light-mode .btn-close-retro {
+  background-color: #ffffff !important;
+  border: 1px solid #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .btn-close-retro:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.light-mode .window-content {
+  color: #000000 !important;
+}
+
+body.light-mode #terminal-box {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.light-mode #terminal-box span[style*="color: yellow"] {
+  color: #a05a00 !important;
+  /* darker yellow for contrast */
+}
+
+body.light-mode #terminal-box span[style*="color:#00ff66"] {
+  color: #007733 !important;
+  /* darker green for contrast */
+}
+
+body.light-mode #terminal-box .input-line span {
+  color: #000000 !important;
+}
+
+body.light-mode .cmd-input {
+  color: #000000 !important;
+  background-color: #f5f5f5 !important;
+  border: 1px solid #000000 !important;
+}
+
+body.light-mode .pixel-icon .icon-label {
+  color: #000000 !important;
+  text-shadow: none !important;
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 1px solid #000000;
+  padding: 1px 4px;
+}
+
+body.light-mode .computer-taskbar {
+  background-color: #ffffff !important;
+  border-top: 2px solid #000000 !important;
+  box-shadow: none !important;
+}
+
+body.light-mode .start-btn {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border: 1px solid #000000 !important;
+}
+
+body.light-mode .start-menu {
+  background-color: #ffffff !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 4px 4px 0px #000000 !important;
+}
+
+body.light-mode .start-menu-item {
+  color: #000000 !important;
+}
+
+body.light-mode .start-menu-item:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.light-mode .task-tab {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border: 2px solid #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+body.light-mode .system-clock,
+body.light-mode .tray-icon {
+  color: #000000 !important;
+}
+
+body.light-mode .water-circle {
+  border-color: #000000 !important;
+  background-color: #ffffff !important;
+}
+
+body.light-mode .skill-name {
+  color: #000000 !important;
+}
+
+/* ==========================================================================
+   4. Project Page Overrides
+   ========================================================================== */
+body.light-mode .project-notepad {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.8) !important;
+  background-image:
+    linear-gradient(#e5e5e5 1px, transparent 1px),
+    linear-gradient(90deg, #e5e5e5 1px, transparent 1px) !important;
+}
+
+body.light-mode .project-tab {
+  background: rgba(0, 0, 0, 0.05) !important;
+  border: 2px solid #999999 !important;
+  color: #555555 !important;
+}
+
+body.light-mode .project-tab:hover {
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .project-tab.active {
+  background-color: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+body.light-mode .project-nav-btn {
+  background: #ffffff !important;
+  border: 2px solid #000000 !important;
+  color: #000000 !important;
+  box-shadow: 2px 2px 0px #000000 !important;
+}
+
+body.light-mode .project-nav-btn:hover {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   5. Contact Page Overrides
+   ========================================================================== */
+body.light-mode .pixel-console-container {
+  min-height: calc(100vh - 100px);
+}
+
+body.light-mode .pixel-console {
+  background: #ffffff !important;
+  border-color: #000000 !important;
+  box-shadow: 6px 6px 0px #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .console-titlebar {
+  background-color: #e0e0e0 !important;
+  border-bottom: 2px solid #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .section-title {
+  color: #000000 !important;
+  border-bottom-color: #000000 !important;
+}
+
+body.light-mode .min-input {
+  background-color: #ffffff !important;
+  border-bottom-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .min-input:focus {
+  background-color: #f0f0f0 !important;
+  border-bottom-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .form-group-minimal {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .form-group-minimal label {
+  color: #000000 !important;
+}
+
+body.light-mode .min-btn {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .min-btn:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.light-mode .info-block {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .links-block {
+  border-color: #000000 !important;
+}
+
+body.light-mode .info-row {
+  color: #000000 !important;
+}
+
+body.light-mode .info-label,
+body.light-mode .info-val {
+  color: #000000 !important;
+}
+
+body.light-mode .success-overlay {
+  background-color: #ffffff !important;
+  border-color: #000000 !important;
+  color: #000000 !important;
+}
+
+body.light-mode .success-icon,
+body.light-mode .success-title,
+body.light-mode .success-subtitle {
+  color: #000000 !important;
+}
+
+body.light-mode .min-link-tag {
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+body.light-mode .min-link-tag:hover {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
