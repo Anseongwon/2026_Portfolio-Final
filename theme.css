@@ -2,7 +2,6 @@
    Global Light Mode & Theme Toggle Styles
    ========================================================================== */
 
-/* 1. Global / Body styles */
 body.light-mode {
   background-color: #dcdcdc !important;
   background-image:
@@ -53,7 +52,7 @@ body.light-mode footer {
   color: #555555 !important;
 }
 
-/* Toggle Button Styling */
+/*버튼*/
 .theme-toggle-btn {
   background: transparent;
   border: 2px solid #ffffff;
@@ -94,7 +93,7 @@ body.light-mode .theme-toggle-btn:active {
 }
 
 /* ==========================================================================
-   2. Index Page Overrides
+   2.메인페이지
    ========================================================================== */
 body.light-mode .hi-pg {
   color: #333333 !important;
@@ -123,7 +122,7 @@ body.light-mode .hi-pg a.contact-me:hover {
 }
 
 /* ==========================================================================
-   3. About Page (Desktop OS Simulation) Overrides
+   3.about 페이지
    ========================================================================== */
 body.light-mode .computer-monitor {
   background-color: #dcdcdc !important;
@@ -187,12 +186,10 @@ body.light-mode #terminal-box {
 
 body.light-mode #terminal-box span[style*="color: yellow"] {
   color: #a05a00 !important;
-  /* darker yellow for contrast */
 }
 
 body.light-mode #terminal-box span[style*="color:#00ff66"] {
   color: #007733 !important;
-  /* darker green for contrast */
 }
 
 body.light-mode #terminal-box .input-line span {
@@ -262,7 +259,7 @@ body.light-mode .skill-name {
 }
 
 /* ==========================================================================
-   4. Project Page Overrides
+   4.프로젝트 페이지
    ========================================================================== */
 body.light-mode .project-notepad {
   background-color: #ffffff !important;
@@ -304,7 +301,7 @@ body.light-mode .project-nav-btn:hover {
 }
 
 /* ==========================================================================
-   5. Contact Page Overrides
+   5.contact 페이지
    ========================================================================== */
 body.light-mode .pixel-console-container {
   min-height: calc(100vh - 100px);

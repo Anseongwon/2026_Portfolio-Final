@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
-  
-  // Set theme from local storage or default to dark
+
   const currentTheme = localStorage.getItem('theme') || 'dark';
-  
+
   if (currentTheme === 'light') {
     document.body.classList.add('light-mode');
     if (toggleBtn) toggleBtn.textContent = '[ DARK ]';

@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Activates target sheet and updates bottom tabs highlighting
   function showSheet(pageNum) {
     if (pageNum < 1 || pageNum > totalSheets) return;
-    
+
     currentSheet = pageNum;
 
     // Toggle active classes on sheets (fades in)
@@ -95,6 +95,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Expose function globally just in case
   window.goToProjectPage = showSheet;
 });
