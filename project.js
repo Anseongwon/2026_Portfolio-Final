@@ -9,12 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextBtn = document.getElementById('next-project-btn');
 
   let currentSheet = 1;
-  const totalSheets = sheets.length; // Exactly 3 sheets/pages
+  const totalSheets = sheets.length;
 
-  // Initialize sheet view
   showSheet(currentSheet);
 
-  // Tab selections (Numbers 1, 2, 3)
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const pageNum = parseInt(tab.getAttribute('data-page'), 10);
@@ -22,7 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Prev / Next button clicks
   if (prevBtn) {
     prevBtn.addEventListener('click', () => {
       navigatePrev();
@@ -47,13 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Activates target sheet and updates bottom tabs highlighting
   function showSheet(pageNum) {
     if (pageNum < 1 || pageNum > totalSheets) return;
 
     currentSheet = pageNum;
 
-    // Toggle active classes on sheets (fades in)
     sheets.forEach((sheet, index) => {
       const isTarget = (index + 1) === currentSheet;
       if (isTarget) {
@@ -63,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Update highlights on bottom pagination numbers
     tabs.forEach(tab => {
       const tabNum = parseInt(tab.getAttribute('data-page'), 10);
       if (tabNum === currentSheet) {
@@ -73,7 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Disable navigation arrows if at boundaries
     if (prevBtn) {
       if (currentSheet === 1) {
         prevBtn.style.opacity = '0.35';
