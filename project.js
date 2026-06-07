@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Project Page Script - Minimalist Project Notebook Tabs
+   Project Page
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
